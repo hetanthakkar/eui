@@ -88,6 +88,7 @@ const EuiDataGridFooterRow = memo(
           {...rest}>
           {leadingControlColumns.map(({ id, width }, i) => (
             <EuiDataGridCell
+              name={['hetan']}
               key={`${id}-${rowIndex}`}
               rowIndex={rowIndex}
               visibleRowIndex={visibleRowIndex}
@@ -112,6 +113,7 @@ const EuiDataGridFooterRow = memo(
 
             return (
               <EuiDataGridCell
+                name={['hetan']}
                 key={`${id}-${rowIndex}`}
                 rowIndex={rowIndex}
                 visibleRowIndex={visibleRowIndex}
@@ -132,6 +134,7 @@ const EuiDataGridFooterRow = memo(
 
             return (
               <EuiDataGridCell
+                name={['hetan']}
                 key={`${id}-${rowIndex}`}
                 rowIndex={rowIndex}
                 visibleRowIndex={visibleRowIndex}

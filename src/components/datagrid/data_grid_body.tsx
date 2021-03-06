@@ -183,6 +183,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
 
     cellContent = (
       <EuiDataGridCell
+        name={['hetan']}
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
@@ -208,6 +209,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
 
     cellContent = (
       <EuiDataGridCell
+        name={['hetan']}
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
@@ -243,6 +245,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
 
     cellContent = (
       <EuiDataGridCell
+        name={['hetan']}
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
