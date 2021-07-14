@@ -110,10 +110,12 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         button={button}
         isOpen={mobilePopoverIsOpen}
         closePopover={() => setMobilePopoverIsOpen(false)}>
-        {renderGithub()}
-        <GuideSketchLink />
-        <GuideFigmaLink />
-        {renderCodeSandbox()}
+        <div className="guideOptionsPopover">
+          {renderGithub()}
+          <GuideSketchLink />
+          <GuideFigmaLink />
+          {renderCodeSandbox()}
+        </div>
       </EuiPopover>
     );
   }

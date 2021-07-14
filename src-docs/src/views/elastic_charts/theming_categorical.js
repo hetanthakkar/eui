@@ -11,7 +11,6 @@ import {
 import {
   EuiSpacer,
   EuiFlexGrid,
-  EuiFlexGroup,
   EuiFlexItem,
   EuiFormRow,
   EuiRange,
@@ -299,20 +298,14 @@ export const Categorical = () => {
     }
 
     customLegend = (
-      <EuiFlexGroup responsive={false} className="guideCharts__customLegend">
-        <EuiFlexItem grow={false}>
-          <div>
-            <span className="guideCharts__customLegendLine" />
-            <span>Actual</span>
-          </div>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <div>
-            <span className="guideCharts__customLegendLine guideCharts__customLegendLine--thin" />
-            <span>Projected</span>
-          </div>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+      <dl className="guideCharts__customLegend">
+        <span className="guideCharts__customLegendLine" />
+        <span>Actual</span>
+        <br />
+        <br />
+        <span className="guideCharts__customLegendLine guideCharts__customLegendLine--thin" />
+        <span>Projected</span>
+      </dl>
     );
   }
 
@@ -322,7 +315,6 @@ export const Categorical = () => {
   return (
     <Fragment>
       {customTitle}
-      {customLegend}
       <div style={{ position: 'relative' }}>
         <Chart size={{ height: 200 }}>
           <Settings
@@ -339,6 +331,7 @@ export const Categorical = () => {
           />
           <Axis id="left-axis" position="left" showGridLines />
         </Chart>
+        {customLegend}
       </div>
 
       <EuiSpacer />

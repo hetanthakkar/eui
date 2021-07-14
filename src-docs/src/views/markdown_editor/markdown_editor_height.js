@@ -5,7 +5,6 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiSpacer,
-  EuiPanel,
 } from '../../../../src/components';
 
 const initialContent1 = `## 👋 Hello there!
@@ -16,7 +15,7 @@ I'm a **EuiMarkdownEditor** with:
 - my parent container is a flex item
 
 
-### Things you should know
+### Things you should know 
 
 When my content is very long 😅
 
@@ -39,12 +38,12 @@ const initialContent3 = `## 👋 Hi!
 
 I'm a **EuiMarkdownEditor** with:
 - a \`height\` set to \`200\`
-- my parent container is a flex item.
-- the \`autoExpandPreview\` is set to \`false\`
+- my parent container is a flex item. 
+- the \`autoExpandPreview\` is set to \`false\` 
 
-### Things you should know
+### Things you should know 
 
-When the content grows the preview height is not automatically adjusted. Just because the \`autoExpandPreview\` is set to \`false\` 😉
+When the content grows the preview height is not automatically adjusted. Just because the \`autoExpandPreview\` is set to \`false\` 😉 
 `;
 
 const initialContent4 = `## 👋 Hello again!
@@ -61,29 +60,25 @@ export default () => {
   const [value4, setValue4] = useState(initialContent4);
 
   return (
-    <>
+    <div className="guideDemo__highlightGrid">
       <EuiFlexGroup>
         <EuiFlexItem>
-          <EuiPanel color="primary">
-            <EuiMarkdownEditor
-              aria-label="EUI markdown editor demo"
-              initialViewMode="viewing"
-              value={value1}
-              onChange={setValue1}
-              height={200}
-            />
-          </EuiPanel>
+          <EuiMarkdownEditor
+            aria-label="EUI markdown editor demo"
+            initialViewMode="viewing"
+            value={value1}
+            onChange={setValue1}
+            height={200}
+          />
         </EuiFlexItem>
         <EuiFlexItem style={{ height: '600px' }}>
-          <EuiPanel color="primary">
-            <EuiMarkdownEditor
-              aria-label="EUI markdown editor demo"
-              initialViewMode="viewing"
-              value={value2}
-              onChange={setValue2}
-              height="full"
-            />
-          </EuiPanel>
+          <EuiMarkdownEditor
+            aria-label="EUI markdown editor demo"
+            initialViewMode="viewing"
+            value={value2}
+            onChange={setValue2}
+            height="full"
+          />
         </EuiFlexItem>
       </EuiFlexGroup>
 
@@ -91,30 +86,26 @@ export default () => {
 
       <EuiFlexGroup>
         <EuiFlexItem>
-          <EuiPanel color="primary">
-            <EuiMarkdownEditor
-              aria-label="EUI markdown editor demo"
-              initialViewMode="viewing"
-              value={value3}
-              onChange={setValue3}
-              height={200}
-              autoExpandPreview={false}
-            />
-          </EuiPanel>
+          <EuiMarkdownEditor
+            aria-label="EUI markdown editor demo"
+            initialViewMode="viewing"
+            value={value3}
+            onChange={setValue3}
+            height={200}
+            autoExpandPreview={false}
+          />
         </EuiFlexItem>
         <EuiFlexItem>
-          <EuiPanel color="primary">
-            <EuiMarkdownEditor
-              aria-label="EUI markdown editor demo"
-              initialViewMode="viewing"
-              value={value4}
-              onChange={setValue4}
-              height={200}
-              maxHeight={300}
-            />
-          </EuiPanel>
+          <EuiMarkdownEditor
+            aria-label="EUI markdown editor demo"
+            initialViewMode="viewing"
+            value={value4}
+            onChange={setValue4}
+            height={200}
+            maxHeight={300}
+          />
         </EuiFlexItem>
       </EuiFlexGroup>
-    </>
+    </div>
   );
 };

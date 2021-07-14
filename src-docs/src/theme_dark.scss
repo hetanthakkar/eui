@@ -3,9 +3,9 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
 @import '../../src/theme_dark';
-@import './components/index';
+@import './components/guide_components';
 @import './services/playground/index';
-@import './views/index';
+@import './views/suggest/global_filter_group';
 
 // Elastic charts
 @import '~@elastic/charts/dist/theme';
